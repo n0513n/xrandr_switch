@@ -4,7 +4,7 @@ xrandr_switch
 Simple bash script to interact with ```xrandr``` and set display and screen solutions.
 
 ```
-usage: dswitch {option} [mode] [--force]
+usage: xswitch {option} [mode] [--force]
 
 options:
   --auto/on   turn on screen monitors
