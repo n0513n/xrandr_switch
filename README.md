@@ -6,7 +6,7 @@ Simple bash script to interact with `xrandr` and set display and screen solution
 Allows `--force` parameter to add and set a custom resolution (requires `cvt`).
 
 ```
-usage: xswitch {option} [mode] [--force]
+usage: xswitch {option} [resolution] [--invert] [--force]
 
 options:
   --auto/on   turn on screen monitors
@@ -25,15 +25,19 @@ Turn on all screen monitors on default resolution:
 
 Force custom 1152x648 resolution on internal screen monitor:
 
-* `xswitch internal 1152x648 --force`
+* `xswitch --internal 1152x648 --force`
 
 Twin view screen monitors using 1920x1080 external resolution:
 
-* `xswitch dual 1920x1080`
+* `xswitch --dual 1920x1080`
 
 Mirror both screen monitors using the same 1366x768 resolution:
 
-* `xswitch clone 1366x768`
+* `xswitch --clone 1366x768`
+
+Activate twin view but inverting screen position:
+
+* `xswitch --dual --invert`
 
 ### Current limitations
 
