@@ -13,8 +13,8 @@
 #   --off       disable screens (!)
 
 # define user settings
-NAME_LEFT="$(xrandr | grep connected | grep -v VIRTUAL | sed 's/ .*//' | head -n 1)"
-NAME_RIGHT="$(xrandr | grep connected | grep -v VIRTUAL | sed 's/ .*//' | tail -n 1)"
+NAME_LEFT="$(xrandr | grep -w connected | grep -v VIRTUAL | sed 's/ .*//' | head -n 1)"
+NAME_RIGHT="$(xrandr | grep -w connected | grep -v VIRTUAL | sed 's/ .*//' | tail -n 1)"
 
 # define vars
 LEFT="$(xrandr | grep $NAME_LEFT | awk '{print $1}' | tail -n 1)"
